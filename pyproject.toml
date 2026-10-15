@@ -1,0 +1,59 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "telos-agent"
+version = "0.1.0"
+description = "Dual-Loop Autonomous Agent Runtime for End-State Prompting and Plateau-to-Plateau Hill Climbing"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "Vamshidhar Reddy", email = "vamshidharreddye@gmail.com" }
+]
+keywords = [
+    "agents",
+    "ai",
+    "verification",
+    "hill-climbing",
+    "dual-loop",
+    "anthropic",
+    "claude",
+    "antigravity",
+    "prompt-engineering"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Software Development :: Testing",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence"
+]
+dependencies = [
+    "pyyaml>=6.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0"
+]
+
+[project.scripts]
+telos = "telos.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/vamshidharre/telos"
+Repository = "https://github.com/vamshidharre/telos"
+Issues = "https://github.com/vamshidharre/telos/issues"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+

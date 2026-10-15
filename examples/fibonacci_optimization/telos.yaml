@@ -1,0 +1,17 @@
+# Telos Contract: Fibonacci Optimization Example
+goal: "Optimize fibonacci calculation from exponential recursion to linear/memoized O(N) while passing all unit tests"
+
+invariants:
+  - "python -m pytest tests/test_calc.py"
+
+metric:
+  command: "python benchmark.py"
+  direction: "minimize"
+  target: 0.001
+
+allowed_scope:
+  - "calc.py"
+
+budget:
+  max_cycles: 5
+  timeout_sec: 10
