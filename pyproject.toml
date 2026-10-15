@@ -57,3 +57,7 @@ Issues = "https://github.com/vamshidharre/telos/issues"
 pythonpath = ["src"]
 testpaths = ["tests"]
 
+[tool.hatch.build.targets.wheel]
+packages = ["src/telos"]
+
+
